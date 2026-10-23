@@ -1,5 +1,5 @@
-
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const slides = [
   {
@@ -9,35 +9,40 @@ const slides = [
     title: "Find Your Everyday Style",
     subtitle: "Discover footwear designed for your everyday journey.",
     buttonText: "Shop Now",
+    action: "products",
   },
   {
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN5-ZTQrLwLl-CX-UGLZn6Np5OOMI8Oy6fAyszIk2tsw&s=10",
     eyebrow: "MADE TO MOVE",
     title: "Style That Moves With You",
-    subtitle: "Find your next favourite pair with SOLEORA.",
+    subtitle: "Find your next favourite pair and step out with confidence.",
     buttonText: "Explore Collection",
+    action: "products",
   },
   {
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvfWCZRsbEZOPSKZvXkXonDNzHVZBq9oUGiEVK8gRFyw&s=10",
-    eyebrow: "STEP INTO SOMETHING NEW",
-    title: "Your Style, Your Statement",
-    subtitle: "Explore everyday essentials made for your style.",
-    buttonText: "Discover More",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1800&q=85",
+    eyebrow: "EXCLUSIVE SPECIAL OFFER",
+    title: "Buy 2, Get 1 Free",
+    subtitle:
+      "Three pairs. One amazing deal. Discover our special footwear promotion.",
+    buttonText: "Discover The Offer",
+    action: "offer",
   },
 ];
 
 export default function HeroSlider() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (paused) return;
 
     const timer = setInterval(() => {
       setActive((current) => (current + 1) % slides.length);
-    }, 1000);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [paused]);
@@ -56,12 +61,23 @@ export default function HeroSlider() {
         behavior: "smooth",
         block: "start",
       });
+    } else {
+      navigate("/products");
     }
+  };
+
+  const handleSlideAction = (slide) => {
+    if (slide.action === "offer") {
+      navigate("/buy-2-get-1-free");
+      return;
+    }
+
+    scrollToProducts();
   };
 
   return (
     <section
-      aria-label="SOLEORA featured collection"
+      aria-label="The Shoe Spot featured collection"
       className="w-full overflow-hidden bg-neutral-900"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -89,7 +105,7 @@ export default function HeroSlider() {
                 decoding="async"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/35 to-black/10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10" />
 
               <div className="relative z-10 mx-auto flex h-full w-full max-w-[1440px] items-center px-6 sm:px-12 lg:px-20">
                 <div
@@ -113,7 +129,7 @@ export default function HeroSlider() {
 
                   <button
                     type="button"
-                    onClick={scrollToProducts}
+                    onClick={() => handleSlideAction(slide)}
                     className="mt-7 inline-flex items-center justify-center bg-white px-7 py-3.5 text-sm font-semibold text-neutral-900 transition-colors duration-300 hover:bg-neutral-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                   >
                     {slide.buttonText}
