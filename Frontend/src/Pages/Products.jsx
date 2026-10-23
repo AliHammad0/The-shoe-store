@@ -752,16 +752,16 @@ export default function ProductsShowcase() {
         {/* Page heading */}
         <div className="mb-8 border-b border-gray-200 pb-7 text-center">
           <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-gray-500">
-            SOLEORA Collection
+            THE SHOE SPOT  Collection
           </p>
 
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Shop All Shoes
+           Step Into Style
           </h1>
 
-          <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-gray-500">
+          {/* <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-gray-500">
             Discover timeless styles, everyday essentials and premium footwear.
-          </p>
+          </p> */}
         </div>
 
         {/* Category selector */}
