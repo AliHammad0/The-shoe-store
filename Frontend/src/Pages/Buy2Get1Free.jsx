@@ -98,7 +98,7 @@ export default function Buy2Get1Free() {
           {/* Featured Image */}
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=90"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1GMXKEzj4IVPUgI8MiaGJgO8Be5WmAntWuRLdvpn1dQ&s=10"
               alt="Featured sneaker from The Shoe Spot"
               className="h-[260px] w-full object-cover sm:h-[320px] lg:h-[370px]"
             />
