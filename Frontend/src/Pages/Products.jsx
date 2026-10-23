@@ -26,7 +26,7 @@ const PRODUCTS = [
     sizes: ["40", "41", "42", "43"],
     availability: "In Stock",
     image:
-      "https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=900&q=85",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT5KVQPaTjo7V77jYGUxbW0NyTaY4i32pmQS_byTp_fw&s",
     badge: "Best Seller",
   },
   {
@@ -52,7 +52,7 @@ const PRODUCTS = [
     sizes: ["39", "40", "41", "42"],
     availability: "In Stock",
     image:
-      "https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=900&q=85",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVm-H8P8S2gyZkVGBJQMY4eY2QFU2qmGCR0UOQdzXqNA&s=10",
     badge: "",
   },
   {
@@ -78,7 +78,7 @@ const PRODUCTS = [
     sizes: ["39", "40", "41", "42", "43"],
     availability: "In Stock",
     image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThn4id18BDzOCT2QdAkM-n4H86a0gjLT4ZbQLiq7eXrg&s=10",
     badge: "Sale",
   },
   {
