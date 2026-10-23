@@ -9,7 +9,7 @@ const products = [
     price: 4500,
     oldPrice: 5500,
     image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnpPggjpyrgUqmyPhL1LHVy_yPAaTKxBZPen2rif2g0w&s=10",
     color: "White / Red",
   },
   {
@@ -19,7 +19,7 @@ const products = [
     price: 5200,
     oldPrice: 6200,
     image:
-      "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=85",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReS9HCQ4TPLQWaQDGgk1QNFt6oZ8DNbdw7dxjUZuJnsQ&s5",
     color: "Classic White",
   },
   {
@@ -29,7 +29,7 @@ const products = [
     price: 4800,
     oldPrice: 5800,
     image:
-      "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=85",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK0Hx1EPJ2ORtMv-71dGHG4NG_kSvetATYzfIUfaOU9g&s=10",
     color: "White / Black",
   },
   {
@@ -39,7 +39,7 @@ const products = [
     price: 5600,
     oldPrice: 6800,
     image:
-      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSodj5tU_U-EaEfSoTQsYo7UGnHyQKA7yfYRmVlxfny4Q&s=10",
     color: "Neutral White",
   },
   {
@@ -49,7 +49,7 @@ const products = [
     price: 4200,
     oldPrice: 5000,
     image:
-      "https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=700&q=85",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToXL9ABjL98H_LWrPpJ30S2AJlziA5XI1Yi-ps-js3MQ&s=10",
     color: "Street Style",
   },
 ];
