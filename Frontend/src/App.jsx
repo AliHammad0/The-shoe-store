@@ -13,7 +13,7 @@ import HeroSlider from "./Pages/Hero";
 import Buy2Get1Free from "./Pages/Buy2Get1Free";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
-import FAQ from "./assets/FAQ";
+import FAQ from "./Pages/FAQ";
 
 
 const Home = () => {
@@ -24,6 +24,7 @@ const Home = () => {
       <ProductsShowcase />
        <BestSelling />
       <DealOfTheWeek />
+      
     </>
   );
 };
