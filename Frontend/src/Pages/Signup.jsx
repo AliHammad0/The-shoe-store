@@ -1,15 +1,13 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/shoelogo.png";
 import {
   Eye,
   EyeOff,
   Mail,
   UserRound,
   LockKeyhole,
-  Footprints,
   ArrowRight,
-  ShieldCheck,
 } from "lucide-react";
 
 const Signup = () => {
@@ -43,126 +41,47 @@ const Signup = () => {
   return (
     <main className="min-h-screen bg-white">
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
-
-        {/* LEFT SIDE */}
+        {/* LEFT SIDE - ONLY BRAND LOGO */}
         <section
-          className="relative flex min-h-[420px] flex-col justify-between overflow-hidden bg-cover bg-center px-8 py-8 text-white sm:px-12 sm:py-10 lg:min-h-screen lg:px-16 lg:py-12"
+          className="relative hidden min-h-screen overflow-hidden bg-cover bg-center lg:flex lg:items-start lg:justify-start lg:px-16 lg:py-12"
           style={{
             backgroundImage:
-              "linear-gradient(135deg, rgba(20,20,20,0.80), rgba(20,20,20,0.48)), url('https://themesdesign.in/heyauth/layouts/images/bg-img-2.png')",
+              "linear-gradient(135deg, rgba(10,10,10,0.88), rgba(25,18,10,0.72)), url('https://themesdesign.in/heyauth/layouts/images/bg-img-2.png')",
           }}
         >
-          {/* Brand */}
           <Link
             to="/"
-            className="relative z-10 flex w-fit items-center gap-3"
+            className="relative z-10 inline-flex items-center gap-4"
           >
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-amber-400 text-black">
-              <Footprints size={27} />
-            </div>
+            <img
+              src={logo}
+              alt="THE SHOE SPOT"
+              className="h-16 w-auto object-contain"
+            />
 
-            <div>
-              <h2 className="text-xl font-extrabold tracking-wider sm:text-2xl">
-                THE SHOE SPOT
-              </h2>
-              <p className="mt-1 text-[10px] tracking-[0.3em] text-amber-300">
-                STEP INTO STYLE
-              </p>
-            </div>
+            <span className="text-2xl font-extrabold tracking-wider text-white">
+              THE SHOE SPOT
+            </span>
           </Link>
-
-          {/* Hero Content */}
-          <div className="relative z-10 my-12 max-w-lg">
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-amber-300">
-              Find Your Perfect Pair
-            </p>
-
-            <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl xl:text-6xl">
-              Learn and
-              <br />
-              <span className="text-amber-300">
-                Discover.
-              </span>
-            </h1>
-
-            <p className="mt-6 max-w-md text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-              No matter what your style is, discover
-              footwear that matches your personality.
-              Start your shopping journey with THE SHOE SPOT.
-            </p>
-
-            {/* Features */}
-            <div className="mt-9 grid grid-cols-3 gap-3">
-              <div className="border border-white/15 bg-white/5 p-3 sm:p-4">
-                <Footprints
-                  size={22}
-                  className="mb-4 text-amber-400"
-                />
-                <p className="text-xs font-bold sm:text-sm">
-                  Latest Styles
-                </p>
-                <p className="mt-2 text-[10px] text-white/60 sm:text-xs">
-                  Fresh footwear
-                </p>
-              </div>
-
-              <div className="border border-white/15 bg-white/5 p-3 sm:p-4">
-                <ShieldCheck
-                  size={22}
-                  className="mb-4 text-amber-400"
-                />
-                <p className="text-xs font-bold sm:text-sm">
-                  Quality First
-                </p>
-                <p className="mt-2 text-[10px] text-white/60 sm:text-xs">
-                  Comfort matters
-                </p>
-              </div>
-
-              <div className="border border-white/15 bg-white/5 p-3 sm:p-4">
-                <UserRound
-                  size={22}
-                  className="mb-4 text-amber-400"
-                />
-                <p className="text-xs font-bold sm:text-sm">
-                  Your Account
-                </p>
-                <p className="mt-2 text-[10px] text-white/60 sm:text-xs">
-                  Join our store
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 border-t border-white/20 pt-5">
-            <p className="text-xs text-white/70">
-              © 2026 THE SHOE SPOT
-            </p>
-
-            <p className="text-xs font-medium tracking-widest text-amber-300">
-              WALK YOUR STYLE
-            </p>
-          </div>
         </section>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT SIDE - SIGNUP FORM */}
         <section className="flex min-h-screen items-center justify-center px-6 py-10 sm:px-12 lg:px-16 xl:px-24">
           <div className="w-full max-w-md">
+            {/* Mobile Logo */}
+            <div className="mb-8 lg:hidden">
+              <Link to="/" className="inline-flex items-center gap-3">
+                <img
+                  src={logo}
+                  alt="THE SHOE SPOT"
+                  className="h-12 w-auto object-contain"
+                />
 
-            {/* Logo */}
-            <Link
-              to="/"
-              className="mb-8 inline-flex items-center gap-2"
-            >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-900 text-amber-400">
-                <Footprints size={23} />
-              </div>
-
-              <span className="text-lg font-extrabold tracking-wider text-neutral-900">
-                THE SHOE SPOT
-              </span>
-            </Link>
+                <span className="text-lg font-extrabold tracking-wider text-neutral-900">
+                  THE SHOE SPOT
+                </span>
+              </Link>
+            </div>
 
             {/* Heading */}
             <div className="mb-7">
@@ -182,7 +101,6 @@ const Signup = () => {
 
             {/* Signup Form */}
             <form onSubmit={handleSubmit} className="space-y-5">
-
               {/* Email */}
               <div>
                 <label
@@ -272,7 +190,7 @@ const Signup = () => {
                     aria-label={
                       showPassword ? "Hide password" : "Show password"
                     }
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-amber-600"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 transition hover:text-amber-600"
                   >
                     {showPassword ? (
                       <EyeOff size={18} />
@@ -287,7 +205,7 @@ const Signup = () => {
                 </p>
               </div>
 
-              {/* Terms & Conditions */}
+              {/* Terms and Conditions */}
               <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-neutral-600">
                 <input
                   type="checkbox"
@@ -324,31 +242,10 @@ const Signup = () => {
               Already have an account?{" "}
               <Link
                 to="/login"
-                className="font-bold text-amber-700 hover:text-amber-900"
+                className="font-bold text-amber-700 transition hover:text-amber-900"
               >
                 Sign in
               </Link>
-            </p>
-
-            {/* Bottom Images */}
-            <div className="mt-9 flex items-center justify-center gap-5 border-t border-neutral-100 pt-5">
-              <img
-                src="https://themesdesign.in/heyauth/layouts/images/img-1.png"
-                alt="Footwear collection"
-                className="h-12 w-16 object-contain opacity-80"
-              />
-
-              <div className="h-8 w-px bg-neutral-200" />
-
-              <img
-                src="https://themesdesign.in/heyauth/layouts/images/img-2.png"
-                alt="Shoe styles"
-                className="h-12 w-16 object-contain opacity-80"
-              />
-            </div>
-
-            <p className="mt-5 text-center text-xs tracking-widest text-neutral-400">
-              STYLE · COMFORT · CONFIDENCE
             </p>
           </div>
         </section>
