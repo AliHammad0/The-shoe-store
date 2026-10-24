@@ -11,6 +11,8 @@ import DealOfTheWeek from "./Pages/DealOfTheWeek";
 import BestSelling from "./Pages/BestSelling";
 import HeroSlider from "./Pages/Hero";
 import Buy2Get1Free from "./Pages/Buy2Get1Free";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
 
 
 const Home = () => {
@@ -36,6 +38,8 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/shoes" element={<ShoesCategory />} />
           <Route path="/buy-2-get-1-free" element={<Buy2Get1Free />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </main>
 
