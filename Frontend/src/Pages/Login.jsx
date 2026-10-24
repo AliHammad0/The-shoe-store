@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -7,7 +6,6 @@ import {
   Mail,
   LockKeyhole,
   ArrowRight,
-  ShoppingBag,
 } from "lucide-react";
 import logo from "../assets/shoelogo.png";
 
@@ -31,7 +29,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Backend login API abhi connect nahi hai.
+    // Login API abhi connect nahi hai.
     console.log("Login details:", {
       ...formData,
       rememberMe,
@@ -59,68 +57,45 @@ export default function Login() {
               alt="THE SHOE SPOT"
               className="h-14 w-auto object-contain"
             />
+
             <span className="text-xl font-black tracking-wider">
               THE SHOE SPOT
             </span>
           </Link>
         </div>
 
-        <div className="relative z-10 max-w-xl py-12">
+        <div className="relative z-10 max-w-xl">
           <p className="mb-5 text-sm font-bold uppercase tracking-[0.35em] text-amber-400">
-            Step Into Style
+            Welcome to THE SHOE SPOT
           </p>
 
           <h1 className="text-5xl font-black leading-tight xl:text-6xl">
-            Find Your
+            Your Style.
             <br />
-            Perfect <span className="text-amber-400">Pair.</span>
+            Your <span className="text-amber-400">Shoes.</span>
           </h1>
 
           <p className="mt-6 max-w-md text-base leading-8 text-gray-300">
-            Your Journey. Your Shoes. Your Style.
-            Discover footwear that brings comfort, confidence,
-            and style to every step. Find your everyday essentials
-            and standout favorites in one place.
+            Discover your next favorite pair and step into
+            a style that feels uniquely yours.
           </p>
-
-          <div className="mt-10 grid grid-cols-3 gap-5">
-            <div>
-              <ShoppingBag className="mb-3 text-amber-400" size={25} />
-              <h3 className="font-bold">Latest Styles</h3>
-              <p className="mt-1 text-sm text-gray-400">
-                Fresh footwear
-              </p>
-            </div>
-
-            <div>
-              <LockKeyhole className="mb-3 text-amber-400" size={25} />
-              <h3 className="font-bold">Quality First</h3>
-              <p className="mt-1 text-sm text-gray-400">
-                Made for comfort
-              </p>
-            </div>
-
-            <div>
-              <ArrowRight className="mb-3 text-amber-400" size={25} />
-              <h3 className="font-bold">Easy Shopping</h3>
-              <p className="mt-1 text-sm text-gray-400">
-                Simple checkout
-              </p>
-            </div>
-          </div>
         </div>
 
-        <div className="relative z-10 flex items-center justify-between gap-4 border-t border-white/15 pt-6 text-xs text-gray-400">
-          <p>© 2026 THE SHOE SPOT</p>
-          <p className="font-semibold tracking-widest">
-            STYLE · COMFORT · CONFIDENCE
-          </p>
+        <div className="relative z-10 border-t border-white/15 pt-6">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-gray-300 transition hover:text-amber-400"
+          >
+            <ArrowRight size={16} className="rotate-180" />
+            Continue Shopping
+          </Link>
         </div>
       </section>
 
       {/* Right Side: Login Form */}
       <section className="flex min-h-screen items-center justify-center px-5 py-10 sm:px-10 lg:px-12">
         <div className="w-full max-w-md">
+          {/* Mobile Logo */}
           <div className="mb-10 text-center lg:hidden">
             <Link to="/" className="inline-flex items-center gap-3">
               <img
@@ -128,30 +103,33 @@ export default function Login() {
                 alt="THE SHOE SPOT"
                 className="h-14 w-auto object-contain"
               />
+
               <span className="text-lg font-black tracking-wide text-black">
                 THE SHOE SPOT
               </span>
             </Link>
           </div>
 
+          {/* Heading */}
           <div className="mb-8">
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-amber-600">
               Welcome Back
             </p>
 
             <h2 className="text-3xl font-black tracking-tight text-gray-900 sm:text-4xl">
-              Welcome to
+              Sign In to Your
               <br />
-              THE SHOE SPOT
+              Account
             </h2>
 
             <p className="mt-3 text-sm leading-6 text-gray-500">
-              Sign in to continue your shopping journey and
-              discover your next favorite pair.
+              Enter your details below to continue shopping.
             </p>
           </div>
 
+          {/* Login Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Email */}
             <div>
               <label
                 htmlFor="email"
@@ -161,7 +139,10 @@ export default function Login() {
               </label>
 
               <div className="flex items-center rounded-xl border border-gray-200 bg-gray-50 px-4 transition focus-within:border-amber-500 focus-within:bg-white">
-                <Mail size={19} className="shrink-0 text-gray-400" />
+                <Mail
+                  size={19}
+                  className="shrink-0 text-gray-400"
+                />
 
                 <input
                   id="email"
@@ -177,6 +158,7 @@ export default function Login() {
               </div>
             </div>
 
+            {/* Password */}
             <div>
               <label
                 htmlFor="password"
@@ -206,7 +188,9 @@ export default function Login() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  aria-label={
+                    showPassword ? "Hide password" : "Show password"
+                  }
                   className="text-gray-400 transition hover:text-amber-600"
                 >
                   {showPassword ? (
@@ -218,6 +202,7 @@ export default function Login() {
               </div>
             </div>
 
+            {/* Remember Me and Forgot Password */}
             <div className="flex items-center justify-between gap-3 text-sm">
               <label className="flex cursor-pointer items-center gap-2 text-gray-600">
                 <input
@@ -231,12 +216,13 @@ export default function Login() {
 
               <Link
                 to="/forgot-password"
-                className="font-semibold text-amber-700 hover:text-amber-800"
+                className="font-semibold text-amber-700 transition hover:text-amber-800"
               >
                 Forgot password?
               </Link>
             </div>
 
+            {/* Submit Button */}
             <button
               type="submit"
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-black px-5 py-4 text-sm font-bold text-white transition hover:bg-amber-600"
@@ -246,11 +232,14 @@ export default function Login() {
             </button>
           </form>
 
+          {/* Signup Link */}
           <div className="my-7 flex items-center gap-4">
             <div className="h-px flex-1 bg-gray-200" />
+
             <span className="text-xs uppercase tracking-wider text-gray-400">
-              Your style starts here
+              New to THE SHOE SPOT?
             </span>
+
             <div className="h-px flex-1 bg-gray-200" />
           </div>
 
@@ -258,23 +247,20 @@ export default function Login() {
             Don&apos;t have an account?{" "}
             <Link
               to="/signup"
-              className="font-bold text-amber-700 hover:text-amber-800"
+              className="font-bold text-amber-700 transition hover:text-amber-800"
             >
               Create Account
             </Link>
           </p>
 
+          {/* Mobile Continue Shopping */}
           <Link
             to="/"
-            className="mt-8 flex items-center justify-center gap-2 text-sm font-semibold text-gray-500 transition hover:text-amber-700"
+            className="mt-8 flex items-center justify-center gap-2 text-sm font-semibold text-gray-500 transition hover:text-amber-700 lg:hidden"
           >
             <ArrowRight size={16} className="rotate-180" />
             Continue Shopping
           </Link>
-
-          <p className="mt-8 text-center text-xs tracking-widest text-gray-400">
-            STYLE · COMFORT · CONFIDENCE
-          </p>
         </div>
       </section>
     </div>
