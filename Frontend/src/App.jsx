@@ -13,6 +13,7 @@ import HeroSlider from "./Pages/Hero";
 import Buy2Get1Free from "./Pages/Buy2Get1Free";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
+import FAQ from "./assets/FAQ";
 
 
 const Home = () => {
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/buy-2-get-1-free" element={<Buy2Get1Free />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </main>
 
